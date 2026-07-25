@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EverHeard — help us test it</title>
+  <meta name="description" content="You're one of the first to try EverHeard. Here's how to install it and what to look for — about 5 minutes, no wrong way to do it." />
+  <meta name="theme-color" content="#0E8C8C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EverHeard" />
+  <meta property="og:title" content="Help us test EverHeard" />
+  <meta property="og:description" content="You're one of the first to try EverHeard. Here's how to install it and what to look for." />
+  <meta property="og:url" content="https://everheard.app/test" />
+
+  <style>
+    :root {
+      --paper: #F6F3EC; --paper-2: #FCFAF5; --panel: #FFFFFF;
+      --ink: #0C2331; --ink-soft: #4A5C6B;
+      --teal: #0E8C8C; --teal-bright: #10A6A0; --amber: #D9891F; --red: #CE4636; --gold: #C9A227;
+      --line: rgba(12, 35, 49, 0.12);
+      --shadow: 0 24px 60px -30px rgba(12, 35, 49, 0.45);
+      --display: "SF Pro Display", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #071620; --paper-2: #0B2029; --panel: #0E2831;
+        --ink: #EAF2F1; --ink-soft: #9DB2B7; --teal: #2AC3BD; --teal-bright: #46D6CF;
+        --amber: #E5A445; --red: #E8695A; --gold: #E4C15A; --line: rgba(255, 255, 255, 0.13);
+        --shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.7);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); -webkit-font-smoothing: antialiased; line-height: 1.5; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 60px 0; }
+    a { color: inherit; }
+    .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin: 0 0 16px; }
+    h1, h2, h3 { text-wrap: balance; margin: 0; }
+    h1 { font-size: clamp(34px, 5.6vw, 58px); font-weight: 800; letter-spacing: -0.025em; line-height: 1.05; }
+    h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; }
+    h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+    p { color: var(--ink-soft); }
+    .lead { font-size: clamp(17px, 2vw, 20px); max-width: 60ch; }
+    .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(1.4) blur(12px); background: color-mix(in srgb, var(--paper) 82%, transparent); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1080px; }
+    .word { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; }
+    .word .ever { color: var(--ink); } .word .heard { color: var(--teal); } .word .dot { color: var(--ink-soft); font-weight: 700; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: #fff; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px; text-decoration: none; border: 0; transition: transform 0.15s ease, background 0.15s ease; }
+    .btn:hover { background: var(--teal-bright); transform: translateY(-1px); }
+    .btn.big { font-size: 17px; padding: 16px 30px; }
+    .hero { padding: 64px 0 44px; }
+    .hero .lead { margin-top: 22px; }
+    .hero-cta { margin-top: 32px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .hero-cta .note { font-size: 13.5px; color: var(--ink-soft); }
+    .steps { display: grid; gap: 14px; margin-top: 30px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; padding: 22px 24px; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+    .step .num { flex: none; width: 36px; height: 36px; border-radius: 50%; background: var(--teal); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 16px; }
+    .step .b { min-width: 0; }
+    .step h3 { margin: 3px 0 5px; }
+    .step p { margin: 0; font-size: 15.5px; }
+    .step .expect { display: inline-block; margin-top: 8px; font-size: 14px; color: var(--teal); font-weight: 600; }
+    .step .chip { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber); margin-left: 8px; vertical-align: 1px; }
+    .gold { color: var(--gold); font-weight: 800; }
+    .callout { background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 26px 28px; margin-top: 30px; }
+    .callout h3 { margin-bottom: 8px; }
+    .callout p { margin: 0; font-size: 15.5px; }
+    .callout a { color: var(--teal); font-weight: 700; text-decoration: none; }
+    .mono { font-family: var(--mono); }
+    footer { border-top: 1px solid var(--line); padding: 32px 0; margin-top: 20px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px; color: var(--ink-soft); max-width: 1080px; }
+    footer a { color: var(--teal); text-decoration: none; }
+    @media (max-width: 640px) { section { padding: 48px 0; } .step { padding: 18px 18px; gap: 14px; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <a class="btn" href="https://testflight.apple.com/join/6YWR1Zkf">Install on TestFlight</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Beta testing · Thank you 💛</p>
+      <h1>You're helping build EverHeard.</h1>
+      <p class="lead">You're one of the first people to try it. Below is how to get set up and a few things to look for — about <b>5 minutes</b>, and there's honestly no wrong way to do it. Just play with it and tell us what you notice.</p>
+      <div class="hero-cta">
+        <a class="btn big" href="https://testflight.apple.com/join/6YWR1Zkf">Install via TestFlight →</a>
+        <span class="note">Free · iPhone or iPad · about 5 minutes</span>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Get set up — just once</p>
+      <h2>Four quick steps</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="b"><h3>Install “TestFlight,” then tap our link</h3><p>Get the free <b>TestFlight</b> app from the App Store, then tap the button above (or the link we sent you). It installs EverHeard for you.</p></div></div>
+        <div class="step"><div class="num">2</div><div class="b"><h3>Do the first run on Wi-Fi</h3><p>The very first time, EverHeard downloads a language pack — a few minutes, just once. After that it works anywhere, even offline.</p></div></div>
+        <div class="step"><div class="num">3</div><div class="b"><h3>Allow the microphone</h3><p>When it asks, tap <b>Allow</b> — that's how it hears speech and sounds. Nothing ever leaves your device.</p></div></div>
+        <div class="step"><div class="num">4</div><div class="b"><h3>Add your name</h3><p>Open <b>⚙ Settings</b> (top-right) and type your name, so EverHeard can highlight it and alert you when someone says it.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">What to try</p>
+      <h2>Give these a go</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="b"><h3>Live captions</h3><p>Tap the big <b>“Tap to talk”</b> button and speak — or play a video/TV.</p><span class="expect">Look for: do the words appear and keep up?</span></div></div>
+        <div class="step"><div class="num">2</div><div class="b"><h3>Other languages</h3><p>Say something in Spanish, French, or another language.</p><span class="expect">Look for: it captions in that language — not translated to English.</span></div></div>
+        <div class="step"><div class="num">3</div><div class="b"><h3>Voices in color <span class="chip">newer devices</span></h3><p>Have two people talk. Then record your own voice in <b>Settings → “This is my voice.”</b></p><span class="expect">Look for: each voice in its own color — yours in <span class="gold">gold</span>.</span></div></div>
+        <div class="step"><div class="num">4</div><div class="b"><h3>Sound alerts</h3><p>Knock on a table, ring a doorbell, or play an alarm.</p><span class="expect">Look for: a banner names the sound at the top, and the device vibrates.</span></div></div>
+        <div class="step"><div class="num">5</div><div class="b"><h3>Your name</h3><p>Have someone say your name out loud.</p><span class="expect">Look for: it highlights in the captions and buzzes.</span></div></div>
+        <div class="step"><div class="num">6</div><div class="b"><h3>Real, everyday use</h3><p>Rotate it, prop it up, and use it during an actual conversation.</p><span class="expect">Look for: anything confusing, slow, or delightful.</span></div></div>
+      </div>
+
+      <div class="callout">
+        <h3>Tell us what you found 📝</h3>
+        <p>Email <a href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20beta%20feedback">alexbalmaseda@gmail.com</a> — what you tried, what happened, and what you expected. If a caption or sound was wrong, roughly what was actually said or heard. <b>Screenshots help a lot.</b> Even “it worked great” is useful!</p>
+      </div>
+
+      <div class="callout" style="border-color:color-mix(in srgb, var(--amber) 45%, var(--line))">
+        <h3>A couple of things to know</h3>
+        <p>EverHeard runs advanced speech AI <b>entirely on your device</b>, so it works best on a <b>2020-or-newer iPhone or iPad</b>; older devices may lag or show a notice. Voice colors are experimental and shine with clear, close-up audio — you can turn them off in Settings. Everything you say stays private on your phone.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <div>© 2026 EverHeard · Beta · <a href="/privacy.html">Privacy</a> · <a href="mailto:alexbalmaseda@gmail.com">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
