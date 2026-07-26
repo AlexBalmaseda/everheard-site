@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EverHeard — Support & FAQ</title>
+  <meta name="description" content="Help with EverHeard: installing, first launch, permissions, device requirements, privacy, and how to reach us." />
+  <meta name="theme-color" content="#0E8C8C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>" />
+  <meta property="og:title" content="EverHeard — Support" />
+  <meta property="og:url" content="https://everheard.app/support" />
+
+  <style>
+    :root {
+      --paper: #F6F3EC; --paper-2: #FCFAF5; --panel: #FFFFFF;
+      --ink: #0C2331; --ink-soft: #4A5C6B;
+      --teal: #0E8C8C; --teal-bright: #10A6A0; --line: rgba(12, 35, 49, 0.12);
+      --display: "SF Pro Display", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #071620; --paper-2: #0B2029; --panel: #0E2831; --ink: #EAF2F1; --ink-soft: #9DB2B7; --teal: #2AC3BD; --teal-bright: #46D6CF; --line: rgba(255,255,255,0.13); }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); -webkit-font-smoothing: antialiased; line-height: 1.55; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 52px 0; }
+    a { color: var(--teal); }
+    .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(1.4) blur(12px); background: color-mix(in srgb, var(--paper) 82%, transparent); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1080px; }
+    .word { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; }
+    .word .ever { color: var(--ink); } .word .heard { color: var(--teal); } .word .dot { color: var(--ink-soft); font-weight: 700; }
+    h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -0.025em; margin: 0 0 10px; }
+    h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 34px 0 6px; }
+    p { color: var(--ink-soft); margin: 6px 0; }
+    .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin: 0 0 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin-top: 14px; }
+    .card p { margin: 0; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: #fff; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px; text-decoration: none; margin-top: 8px; }
+    .btn:hover { background: var(--teal-bright); }
+    footer { border-top: 1px solid var(--line); padding: 30px 0; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px; color: var(--ink-soft); max-width: 1080px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <a class="btn" style="margin-top:0" href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20support">Contact us</a>
+    </div>
+  </div>
+
+  <header class="wrap" style="padding-top:52px">
+    <p class="eyebrow">Support</p>
+    <h1>We're here to help.</h1>
+    <p>Questions, problems, or ideas for EverHeard? Email us any time — we read every message.</p>
+    <a class="btn" href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20support">Email support →</a>
+    <p style="margin-top:10px"><a href="mailto:alexbalmaseda@gmail.com">alexbalmaseda@gmail.com</a> · we typically reply within a couple of days.</p>
+  </header>
+
+  <section class="wrap" style="padding-top:20px">
+    <p class="eyebrow">Common questions</p>
+
+    <h2>How do I install it?</h2>
+    <div class="card"><p>During the beta, install Apple's free <b>TestFlight</b> app, then open your invite link and tap Install. Do the first launch on <b>Wi-Fi</b> — it downloads a language pack once (a few minutes), then works offline.</p></div>
+
+    <h2>It says "listening" but no captions appear.</h2>
+    <div class="card"><p>The first time, EverHeard downloads a speech model (a one-time download) — let it finish on Wi-Fi, then tap <b>Tap to talk</b> and speak. If it still doesn't caption, fully close and reopen the app.</p></div>
+
+    <h2>Do I need to allow the microphone?</h2>
+    <div class="card"><p>Yes — that's how EverHeard hears speech and sounds. Tap <b>Allow</b> when asked. Your audio never leaves your device.</p></div>
+
+    <h2>What devices does it work on?</h2>
+    <div class="card"><p>EverHeard runs advanced speech AI entirely on your device, so it works best on a <b>2020-or-newer iPhone or iPad</b>. On older devices, live captions may lag; the app will show a notice if your device is below the recommended line.</p></div>
+
+    <h2>Is my data private?</h2>
+    <div class="card"><p>Completely. All speech and sound processing happens <b>on your device</b>. There's no account and no server that receives your audio or captions — it even works offline. See our <a href="/privacy.html">Privacy Policy</a>.</p></div>
+
+    <h2>The voice colors seem off.</h2>
+    <div class="card"><p>Voice color-coding is experimental and works best with clear, close-up audio. You can turn it off any time in <b>Settings → "Color-code voices."</b> Captions and sound alerts don't depend on it.</p></div>
+
+    <h2>How do I send feedback or report a problem?</h2>
+    <div class="card"><p>Email <a href="mailto:alexbalmaseda@gmail.com">alexbalmaseda@gmail.com</a> — tell us what you tried, what you expected, and what happened. Screenshots help a lot. Even "it worked great" is useful!</p></div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <div>© 2026 EverHeard · <a href="/privacy.html">Privacy</a> · <a href="/test">Test EverHeard</a> · <a href="mailto:alexbalmaseda@gmail.com">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
