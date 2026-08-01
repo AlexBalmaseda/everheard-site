@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B0F14">
+<title>EverHeard for Mac — Download</title>
+<style>
+  :root{
+    --ink:#12303a; --ink-soft:#4a6670; --teal:#2AA198; --teal-deep:#14807a;
+    --gold:#E0A82E; --bg:#F6F4EF; --card:#ffffff; --line:#e4ded3;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .topbar{border-bottom:1px solid var(--line);background:rgba(246,244,239,.9);
+    backdrop-filter:saturate(1.4) blur(8px);-webkit-backdrop-filter:saturate(1.4) blur(8px);
+    position:sticky;top:0;z-index:5}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .word{font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+  .word .ever{color:var(--ink)} .word .heard{color:var(--teal-deep)}
+  .word .dot{color:var(--ink-soft);font-weight:600}
+  .btn{display:inline-block;background:var(--teal-deep);color:#fff;text-decoration:none;
+    font-weight:700;padding:11px 20px;border-radius:12px;border:1px solid transparent;
+    transition:transform .06s ease, background .2s}
+  .btn:hover{background:var(--teal)} .btn:active{transform:translateY(1px)}
+  .btn.big{font-size:19px;padding:16px 30px;border-radius:14px}
+  .hero{padding:64px 0 28px;text-align:center}
+  .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12.5px;font-weight:800;
+    color:var(--teal-deep);margin:0 0 14px}
+  h1{font-size:clamp(30px,6vw,46px);line-height:1.08;margin:0 0 14px;letter-spacing:-.02em;text-wrap:balance}
+  .lead{font-size:19px;color:var(--ink-soft);max-width:34em;margin:0 auto 26px;text-wrap:pretty}
+  .dl-note{display:block;margin-top:12px;font-size:13.5px;color:var(--ink-soft)}
+  section{padding:26px 0}
+  h2{font-size:23px;margin:0 0 18px;letter-spacing:-.01em}
+  .steps{display:grid;gap:14px}
+  .step{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px}
+  .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--teal-deep);color:#fff;
+    font-weight:800;display:grid;place-items:center;font-size:15px}
+  .step h3{margin:2px 0 3px;font-size:16px} .step p{margin:0;color:var(--ink-soft);font-size:15px}
+  .feat{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+  @media(max-width:560px){.feat{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .card h3{margin:0 0 4px;font-size:16px} .card p{margin:0;color:var(--ink-soft);font-size:14.5px}
+  .callout{background:color-mix(in srgb,var(--teal) 8%,var(--card));
+    border:1px solid color-mix(in srgb,var(--teal) 35%,var(--line));border-radius:14px;padding:16px 18px;margin-top:8px}
+  .req{font-size:14px;color:var(--ink-soft)}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:26px 0;color:var(--ink-soft);font-size:14px}
+  footer a{color:var(--teal-deep)}
+</style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap">
+    <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:.5em;vertical-align:super;opacity:.6">™</sup><span class="dot">.app</span></a>
+    <a class="btn" href="/EverHeard.dmg" download>Download</a>
+  </div></div>
+
+  <header class="hero"><div class="wrap">
+    <p class="eyebrow">Beta · for Mac 💛</p>
+    <h1>Captions and sound alerts, right on your Mac.</h1>
+    <p class="lead">A floating caption bar that follows you across every desktop, live multilingual captions, and visual alerts for doorbells, alarms, and more — all <b>private, on your Mac</b>.</p>
+    <a class="btn big" href="/EverHeard.dmg" download>Download EverHeard for Mac</a>
+    <span class="dl-note">Free · version 0.1.0 (beta) · about 2&nbsp;MB · Apple-notarized</span>
+  </div></header>
+
+  <section><div class="wrap">
+    <h2>Get started in 3 steps</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>Open the download</h3><p>Double-click <b>EverHeard.dmg</b>, then drag <b>EverHeard</b> into your <b>Applications</b> folder.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Open EverHeard</h3><p>Launch it from Applications (or Spotlight). The first time, it downloads its language model — a moment, just once.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Allow the microphone</h3><p>Click <b>Allow</b> when asked — that's how it hears speech and sounds. Nothing ever leaves your Mac.</p></div></div>
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <h2>What you get</h2>
+    <div class="feat">
+      <div class="card"><h3>🗨️ Live captions</h3><p>On-device Whisper turns speech into text — and auto-detects the language, so it captions Spanish, French, and more in their own words.</p></div>
+      <div class="card"><h3>🪟 Floating bar</h3><p>A caption bar that stays on top and follows you across every desktop. Drag it anywhere; lock it to click through.</p></div>
+      <div class="card"><h3>🔔 Sound alerts</h3><p>A banner and a screen flash when it hears a doorbell, knock, alarm, phone, and more — a whole-screen flash for urgent ones.</p></div>
+      <div class="card"><h3>🔒 Private by design</h3><p>All speech and sound processing runs on your Mac. Nothing is recorded, nothing is uploaded.</p></div>
+    </div>
+    <div class="callout">
+      <p class="req"><b>Requirements:</b> macOS 14 (Sonoma) or newer, Apple-silicon Mac. Works best with a good microphone.
+      This is a <b>beta</b> — please tell us what you find: <a href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20for%20Mac">alexbalmaseda@gmail.com</a>. In the app, <b>Menu → Save diagnostics</b> writes a log to your Downloads you can send us.</p>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:.5em;vertical-align:super;opacity:.6">™</sup><span class="dot">.app</span></a>
+    &nbsp;· © 2026 EverHeard · Beta · <a href="/privacy.html">Privacy</a> · <a href="mailto:alexbalmaseda@gmail.com">Contact</a>
+  </div></footer>
+</body>
+</html>
