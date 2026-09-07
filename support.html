@@ -37,6 +37,18 @@
     .card p { margin: 0; }
     .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: #fff; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px; text-decoration: none; margin-top: 8px; }
     .btn:hover { background: var(--teal-bright); }
+    [hidden] { display: none !important; }
+    .support { background: var(--paper-2); border-top: 1px solid var(--line); }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(216px, 1fr)); gap: 16px; margin-top: 24px; }
+    .tier { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; }
+    .tier .emoji { font-size: 30px; line-height: 1; }
+    .tier h3 { margin: 12px 0 0; font-size: 17px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+    .tier .price { margin: 2px 0 14px; font-size: 26px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+    .tier .price span { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+    .tier .pp { margin-top: auto; }
+    .onetime { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+    .onetime p { margin: 0; color: var(--ink); }
+    .thanks { text-align: center; margin-top: 24px; }
     footer { border-top: 1px solid var(--line); padding: 30px 0; }
     footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px; color: var(--ink-soft); max-width: 1080px; }
   </style>
@@ -45,7 +57,7 @@
   <div class="topbar">
     <div class="wrap">
       <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
-      <a class="btn" style="margin-top:0" href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20support">Contact us</a>
+      <a class="btn" style="margin-top:0" href="mailto:alex@everheard.app?subject=EverHeard%20support">Contact us</a>
     </div>
   </div>
 
@@ -53,8 +65,8 @@
     <p class="eyebrow">Support</p>
     <h1>We're here to help.</h1>
     <p>Questions, problems, or ideas for EverHeard? Email us any time — we read every message.</p>
-    <a class="btn" href="mailto:alexbalmaseda@gmail.com?subject=EverHeard%20support">Email support →</a>
-    <p style="margin-top:10px"><a href="mailto:alexbalmaseda@gmail.com">alexbalmaseda@gmail.com</a> · we typically reply within a couple of days.</p>
+    <a class="btn" href="mailto:alex@everheard.app?subject=EverHeard%20support">Email support →</a>
+    <p style="margin-top:10px"><a href="mailto:alex@everheard.app">alex@everheard.app</a> · we typically reply within a couple of days.</p>
   </header>
 
   <section class="wrap" style="padding-top:20px">
@@ -79,14 +91,84 @@
     <div class="card"><p>Voice color-coding is experimental and works best with clear, close-up audio. You can turn it off any time in <b>Settings → "Color-code voices."</b> Captions and sound alerts don't depend on it.</p></div>
 
     <h2>How do I send feedback or report a problem?</h2>
-    <div class="card"><p>Email <a href="mailto:alexbalmaseda@gmail.com">alexbalmaseda@gmail.com</a> — tell us what you tried, what you expected, and what happened. Screenshots help a lot. Even "it worked great" is useful!</p></div>
+    <div class="card"><p>Email <a href="mailto:alex@everheard.app">alex@everheard.app</a> — tell us what you tried, what you expected, and what happened. Screenshots help a lot. Even "it worked great" is useful!</p></div>
+  </section>
+
+  <section class="support">
+    <div class="wrap">
+      <p class="eyebrow">Support development</p>
+      <h2 style="font-size:clamp(24px,4vw,34px); font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;">Help keep EverHeard free &amp; private.</h2>
+      <p>EverHeard is free, has no ads, and never sends your audio or captions anywhere — everything runs on your device. If it helps you and you'd like to chip in toward its development, thank you. It's completely optional, and it genuinely keeps this going.</p>
+
+      <div class="tiers" id="eh-support-grid">
+        <div class="tier">
+          <div class="emoji">☕</div>
+          <h3>Buy us a coffee</h3>
+          <div class="price">$5<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-3G504865TY575521ANKPQ75Y"></div>
+        </div>
+        <div class="tier">
+          <div class="emoji">🍽️</div>
+          <h3>Buy us a meal</h3>
+          <div class="price">$20<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-6PT48832S4239934VNKPQJBQ"></div>
+        </div>
+        <div class="tier">
+          <div class="emoji">🌍</div>
+          <h3>Help make the world better</h3>
+          <div class="price">$50<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-7J9935925L159761WNKPQK2Y"></div>
+        </div>
+      </div>
+
+      <div class="onetime" id="eh-onetime">
+        <p><b>Prefer to give once?</b> A one‑time contribution helps just as much.</p>
+        <a class="btn" style="margin-top:0" href="https://www.paypal.com/ncp/payment/725WNT4WVFKC2" target="_blank" rel="noopener">Contribute once →</a>
+      </div>
+
+      <div class="thanks card" id="eh-thanks" hidden>
+        <div style="font-size:42px; line-height:1">💛</div>
+        <h2 style="margin:10px 0 4px; font-weight:800;">Thank you — truly.</h2>
+        <p style="margin:0">Your support keeps EverHeard free, private, and on‑device for everyone who needs it.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
     <div class="wrap">
       <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
-      <div>© 2026 EverHeard · <a href="/privacy.html">Privacy</a> · <a href="/test">Test EverHeard</a> · <a href="mailto:alexbalmaseda@gmail.com">Contact</a></div>
+      <div>© 2026 EverHeard · <a href="/privacy.html">Privacy</a> · <a href="/test">Test EverHeard</a> · <a href="mailto:alex@everheard.app">Contact</a></div>
     </div>
   </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=BAADG91G0AUT3GqoWvn3_X3lzF9uTpjkABgzZcctsOQHUUjLDf62d8V_sN0K17E8RB3hZQc4nRXPn1PtqI&vault=true&intent=subscription"></script>
+  <script>
+    (function () {
+      function ehThanks() {
+        var g = document.getElementById('eh-support-grid');
+        var o = document.getElementById('eh-onetime');
+        var t = document.getElementById('eh-thanks');
+        if (g) g.hidden = true;
+        if (o) o.hidden = true;
+        if (t) { t.hidden = false; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      }
+      var plans = [
+        'P-3G504865TY575521ANKPQ75Y',
+        'P-6PT48832S4239934VNKPQJBQ',
+        'P-7J9935925L159761WNKPQK2Y'
+      ];
+      if (window.paypal && paypal.Buttons) {
+        plans.forEach(function (planId) {
+          paypal.Buttons({
+            style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+            createSubscription: function (data, actions) {
+              return actions.subscription.create({ plan_id: planId });
+            },
+            onApprove: function () { ehThanks(); }
+          }).render('#paypal-container-' + planId);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
