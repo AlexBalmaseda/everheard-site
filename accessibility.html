@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EverHeard — Accessibility</title>
+  <meta name="description" content="What EverHeard supports for accessibility today, what we are working on next, and how to tell us when something does not work for you." />
+  <meta name="theme-color" content="#0E8C8C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>" />
+  <style>
+    :root {
+      --paper: #F6F3EC; --panel: #FFFFFF; --ink: #0C2331; --ink-soft: #4A5C6B;
+      --teal: #0E8C8C; --line: rgba(12,35,49,0.12);
+      --display: "SF Pro Display", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #071620; --panel: #0E2831; --ink: #EAF2F1; --ink-soft: #9DB2B7; --teal: #2AC3BD; --line: rgba(255,255,255,0.13); }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+    .word { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 40px; }
+    .word .ever { color: var(--ink); } .word .heard { color: var(--teal); } .word .dot { color: var(--ink-soft); }
+    h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; }
+    .updated { color: var(--ink-soft); font-size: 14px; margin: 0 0 32px; }
+    h2 { font-size: 20px; font-weight: 800; margin: 36px 0 10px; letter-spacing: -0.01em; }
+    p, li { color: var(--ink-soft); font-size: 16.5px; }
+    strong { color: var(--ink); }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .callout { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: 12px; padding: 18px 20px; margin: 24px 0; }
+    .callout p { margin: 0; color: var(--ink); font-weight: 600; }
+    a { color: var(--teal); }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="word"><a href="/" style="text-decoration:none"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a></div>
+
+    <h1>Accessibility</h1>
+    <p class="updated">Last updated: 11 October 2026</p>
+
+    <div class="callout">
+      <p>EverHeard is made for people who are Deaf or hard of hearing, so accessibility is the whole point of the app. This page explains what the app supports today, what we're working on next, and how to tell us when something doesn't work for you.</p>
+    </div>
+
+    <h2>What EverHeard supports today</h2>
+    <ul>
+      <li><strong>Dark interface everywhere.</strong> EverHeard uses a dark design on iPhone, iPad, Apple Watch and Mac. Its text is warm off-white, not pure white, which reduces glare.</li>
+      <li><strong>Sufficient contrast on iPhone and iPad.</strong> Captions and controls are designed to meet the WCAG contrast guidelines: 4.5:1 for regular text and 3:1 for large text.</li>
+      <li><strong>Not by colour alone on Mac.</strong> Speakers and sounds are marked in words, not only by colour. For example, sound descriptions appear in [brackets].</li>
+      <li><strong>Large captions.</strong> Captions start large (30&nbsp;pt on iPhone and iPad) and follow your iPhone or iPad text-size setting. On the Mac you choose the caption size.</li>
+      <li><strong>Alerts you can see and feel.</strong> Important sounds show a labelled alert with an icon. iPhone vibrates and Apple Watch taps your wrist. On iPad and Mac, the screen flashes. Alarm flashes stay under 3 a second, and if Reduce Motion is on, iPhone and iPad show a steady tint instead.</li>
+      <li><strong>VoiceOver.</strong> On iPhone and iPad, VoiceOver reads sound alerts aloud and tells you whether each setting is on or off.</li>
+    </ul>
+
+    <h2>What we're working on next</h2>
+    <ul>
+      <li>Full VoiceOver support for following live captions.</li>
+      <li>Reduce Motion support throughout the app.</li>
+      <li>A clear marker, not only dimmer text, for captions the app is unsure about.</li>
+      <li>Testing at the largest text sizes.</li>
+    </ul>
+    <p>We update the App Store accessibility information as each improvement ships.</p>
+
+    <h2>Our commitment</h2>
+    <p>Our commitment is to get as close to never confidently wrong as possible. EverHeard is an accessibility aid, not a medical or safety device. Please keep using your smoke alarms and other safety devices as you normally would.</p>
+
+    <h2>Tell us what doesn't work for you</h2>
+    <p>If something in EverHeard is hard to use with your hearing, vision, motion or any assistive technology, please write to <a href="mailto:support@everheard.app?subject=EverHeard%20accessibility">support@everheard.app</a>. We read every message, and your feedback shapes each update.</p>
+
+    <footer>© 2026 EverHeard · A <a href="https://btcmedialabs.com">BTC Media Labs</a> product · <a href="/">everheard.app</a> · <a href="/privacy.html">Privacy</a> · <a href="/support.html">Support</a></footer>
+  </div>
+</body>
+</html>
