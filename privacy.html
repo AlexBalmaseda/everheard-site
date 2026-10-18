@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EverHeard — Privacy Policy</title>
-  <meta name="description" content="EverHeard is private by design: all speech and sound processing happens on your device. Your conversations never leave your phone." />
+  <meta name="description" content="EverHeard is private by design: all speech and sound processing happens on your device. Your conversations never leave your device." />
   <meta name="theme-color" content="#0E8C8C" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>" />
   <style>
@@ -39,34 +39,59 @@
     <div class="word"><a href="/" style="text-decoration:none"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a></div>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 2026</p>
+    <p class="updated">Last updated: October 2026</p>
 
     <div class="callout">
-      <p>EverHeard is private by design. Everything it hears is processed on your device. Your conversations and the sounds around you never leave your phone — there are no accounts and no servers that receive them.</p>
+      <p>EverHeard is private by design. EverHeard never sends your conversations or the sounds around you anywhere. There's no account, and everything it hears is processed on your device.</p>
     </div>
 
+    <p>This policy covers EverHeard on iPhone, iPad, Apple Watch and Mac, and EverHeard for Android, which is in development. Where the platforms differ, it says so.</p>
+
     <h2>What EverHeard accesses</h2>
-    <p>EverHeard uses your device's <strong>microphone</strong> to do two things in real time: turn nearby speech into on-screen captions, and recognize environmental sounds (like a doorbell, alarm, or knock) to alert you.</p>
+    <p>EverHeard uses your device's <strong>microphone</strong> to do two things in real time: turn nearby speech into on-screen captions, and recognize environmental sounds (like a doorbell, alarm, or knock) to alert you. It listens only while captions or sound alerts are turned on.</p>
 
     <h2>Everything happens on your device</h2>
-    <p>Speech recognition and sound recognition run entirely on your phone using on-device models. Audio is processed live and is <strong>not recorded, stored, or transmitted</strong> for these features to work.</p>
+    <p>Speech recognition and sound recognition run entirely on your device using on-device models. Audio is processed live and is <strong>not recorded, stored, or transmitted</strong> for these features to work.</p>
 
     <h2>What we do not do</h2>
     <ul>
       <li>We do <strong>not</strong> require an account, login, or profile to use the core features.</li>
       <li>We do <strong>not</strong> send your audio, captions, or detected sounds to any server.</li>
-      <li>We do <strong>not</strong> use analytics or tracking, and we do <strong>not</strong> show ads.</li>
+      <li>We do <strong>not</strong> use analytics or tracking, and we do <strong>not</strong> show ads. The Android app doesn't use an advertising ID.</li>
       <li>We do <strong>not</strong> sell, rent, or share your information with anyone.</li>
     </ul>
 
     <h2>Information stored on your device</h2>
-    <p>Your preferences (such as the name you choose to be alerted by and your haptic settings) and any recent transcript history are stored <strong>locally on your device only</strong>. You can remove all of it at any time by deleting the app.</p>
+    <p>Your preferences (such as the name you choose to be alerted by and your haptic settings) are stored <strong>locally on your device only</strong>. If you choose to save conversations, EverHeard keeps the caption text (never audio) on your device. You can delete saved conversations one by one in History, or clear them all when you turn saving off. On iPhone, iPad and Android, deleting the app removes everything EverHeard stored.</p>
+    <ul>
+      <li><strong>iPhone and iPad:</strong> saving conversations is currently on by default, and will be off by default from version 1.0.1. Saved conversations are excluded from iCloud and computer backups.</li>
+      <li><strong>Mac:</strong> saving is off by default. If you turn it on, conversations are saved to a folder you choose. If that folder is included in your backups or synced to a cloud service such as iCloud Drive, copies may be stored there under your own backup and sync settings. That's your choice, not something EverHeard does, and we can't access those copies. You delete saved conversations in that folder ("Open saved conversations…" in the menu). Moving the app to the Trash doesn't remove them, or the settings EverHeard keeps in your Library folder.</li>
+      <li><strong>Android:</strong> saving conversations is off by default. On Android, saved conversations are excluded from Google backups and from transfers to a new phone.</li>
+    </ul>
+    <p>Wherever you choose to keep saved conversations or copies of them (a folder on a computer, a cloud sync service, a file you export or share, or an Android emulator on a computer that is itself backed up), those copies follow your own settings and choices. EverHeard doesn't send them anywhere, and we can't access them.</p>
+
+    <h2>Your voice profile (optional)</h2>
+    <p>On iPhone, iPad and Mac, speaker colours can tell your voice apart from others. Only if you choose "This is my voice", EverHeard listens to about five seconds of your speech and turns it into a set of numbers (a voice profile) stored on your device. No audio is kept, and the profile never leaves your device: it's excluded from iCloud, computer and Time Machine backups. You can delete it any time with "Forget my voice" in Settings (iPhone and iPad) or in the menu (Mac). On iPhone and iPad, deleting the app also removes it; on Mac it stays until you choose "Forget my voice". There is no voice profile on Android or Apple Watch.</p>
 
     <h2>Network use</h2>
-    <p>The only time EverHeard uses the network is a <strong>one-time download of the speech-recognition model</strong> the first time you use captions. This downloads data <em>to</em> your device; no conversation data is ever uploaded. After that, captions and sound alerts work fully offline.</p>
+    <p>EverHeard uses the network only to download its models, once, and when you tap a link to everheard.app:</p>
+    <ul>
+      <li><strong>Captions:</strong> the speech-recognition model is downloaded from Hugging Face (huggingface.co) the first time you use captions.</li>
+      <li><strong>Speaker colours</strong> (iPhone, iPad and Mac): a speaker-recognition model is downloaded from GitHub (github.com) the first time speaker colours are used. It's a general model file, not anything about you.</li>
+    </ul>
+    <p>These downloads bring data <em>to</em> your device; no conversation, audio or caption is ever uploaded. They send no account, advertising or device identifier. Like any download, the server sees your IP address and basic app and operating-system information. After the downloads, captions and sound alerts work offline.</p>
 
     <h2>Permissions</h2>
-    <p>EverHeard requests <strong>microphone</strong> access, which is required for captions and sound alerts. You can revoke it any time in your device Settings; the app will simply stop listening.</p>
+    <p>EverHeard requests <strong>microphone</strong> access, which is required for captions and sound alerts. On Android it also uses vibration for alerts, and the internet only for the model download. You can revoke microphone access any time in your device settings; the app will simply stop listening.</p>
+
+    <h2>When you contact us or choose to support EverHeard</h2>
+    <p>The app itself sends us nothing. We only receive information you choose to send us outside the app:</p>
+    <ul>
+      <li><strong>Email and sharing.</strong> If you choose to email us or share a conversation, it's sent through your own email or sharing app, and we receive only what you send. We use your message and email address only to reply and to improve EverHeard.</li>
+      <li><strong>Optional payments.</strong> If you choose to support EverHeard on our website, PayPal handles the payment under its own privacy policy and shares your payment details with us (such as your name, email and the amount) so BTC Media Labs LLC can keep the records the law requires.</li>
+      <li><strong>Beta testing.</strong> If you join the beta, Apple's TestFlight or Google Play shares your tester email with us so we can invite you.</li>
+    </ul>
+    <p>We never sell or share this information. To ask what we hold about you, or to have it deleted where the law allows, write to <a href="mailto:support@everheard.app">support@everheard.app</a>.</p>
 
     <h2>Children's privacy</h2>
     <p>EverHeard does not knowingly collect personal information from anyone, including children. Because nothing is collected or transmitted, no personal data leaves the device.</p>

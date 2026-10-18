@@ -94,44 +94,8 @@
     <div class="card"><p>Email <a href="mailto:support@everheard.app">support@everheard.app</a> — tell us what you tried, what you expected, and what happened. Screenshots help a lot. Even "it worked great" is useful!</p></div>
   </section>
 
-  <section class="support">
-    <div class="wrap">
-      <p class="eyebrow">Support development</p>
-      <h2 style="font-size:clamp(24px,4vw,34px); font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;">Help keep EverHeard free &amp; private.</h2>
-      <p>EverHeard is free, has no ads, and never sends your audio or captions anywhere — everything runs on your device. If it helps you and you'd like to chip in toward its development, thank you. It's completely optional, and it genuinely keeps this going.</p>
-
-      <div class="tiers" id="eh-support-grid">
-        <div class="tier">
-          <div class="emoji">☕</div>
-          <h3>Buy us a coffee</h3>
-          <div class="price">$5<span> / mo</span></div>
-          <div class="pp" id="paypal-container-P-3G504865TY575521ANKPQ75Y"></div>
-        </div>
-        <div class="tier">
-          <div class="emoji">🍽️</div>
-          <h3>Buy us a meal</h3>
-          <div class="price">$20<span> / mo</span></div>
-          <div class="pp" id="paypal-container-P-6PT48832S4239934VNKPQJBQ"></div>
-        </div>
-        <div class="tier">
-          <div class="emoji">🌍</div>
-          <h3>Help make the world better</h3>
-          <div class="price">$50<span> / mo</span></div>
-          <div class="pp" id="paypal-container-P-7J9935925L159761WNKPQK2Y"></div>
-        </div>
-      </div>
-
-      <div class="onetime" id="eh-onetime">
-        <p><b>Prefer to give once?</b> A one‑time contribution helps just as much.</p>
-        <a class="btn" style="margin-top:0" href="https://www.paypal.com/ncp/payment/725WNT4WVFKC2" target="_blank" rel="noopener">Contribute once →</a>
-      </div>
-
-      <div class="thanks card" id="eh-thanks" hidden>
-        <div style="font-size:42px; line-height:1">💛</div>
-        <h2 style="margin:10px 0 4px; font-weight:800;">Thank you — truly.</h2>
-        <p style="margin:0">Your support keeps EverHeard free, private, and on‑device for everyone who needs it.</p>
-      </div>
-    </div>
+  <section class="wrap" style="padding-top:8px">
+    <div class="card"><p>EverHeard is free, with no ads and no account. If you'd like to support EverHeard and the team building it, <a href="/support-us.html">here's how →</a></p></div>
   </section>
 
   <footer>
@@ -141,34 +105,5 @@
     </div>
   </footer>
 
-  <script src="https://www.paypal.com/sdk/js?client-id=BAADG91G0AUT3GqoWvn3_X3lzF9uTpjkABgzZcctsOQHUUjLDf62d8V_sN0K17E8RB3hZQc4nRXPn1PtqI&vault=true&intent=subscription"></script>
-  <script>
-    (function () {
-      function ehThanks() {
-        var g = document.getElementById('eh-support-grid');
-        var o = document.getElementById('eh-onetime');
-        var t = document.getElementById('eh-thanks');
-        if (g) g.hidden = true;
-        if (o) o.hidden = true;
-        if (t) { t.hidden = false; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      }
-      var plans = [
-        'P-3G504865TY575521ANKPQ75Y',
-        'P-6PT48832S4239934VNKPQJBQ',
-        'P-7J9935925L159761WNKPQK2Y'
-      ];
-      if (window.paypal && paypal.Buttons) {
-        plans.forEach(function (planId) {
-          paypal.Buttons({
-            style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
-            createSubscription: function (data, actions) {
-              return actions.subscription.create({ plan_id: planId });
-            },
-            onApprove: function () { ehThanks(); }
-          }).render('#paypal-container-' + planId);
-        });
-      }
-    })();
-  </script>
 </body>
 </html>

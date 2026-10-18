@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support EverHeard — EverHeard</title>
+  <meta name="description" content="Optional, voluntary support for EverHeard, paid to BTC Media Labs LLC. Not a donation and not tax-deductible." />
+  <meta name="theme-color" content="#0E8C8C" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👂</text></svg>" />
+  <meta property="og:title" content="EverHeard — Support" />
+  <meta property="og:url" content="https://everheard.app/support" />
+
+  <style>
+    :root {
+      --paper: #F6F3EC; --paper-2: #FCFAF5; --panel: #FFFFFF;
+      --ink: #0C2331; --ink-soft: #4A5C6B;
+      --teal: #0E8C8C; --teal-bright: #10A6A0; --line: rgba(12, 35, 49, 0.12);
+      --display: "SF Pro Display", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #071620; --paper-2: #0B2029; --panel: #0E2831; --ink: #EAF2F1; --ink-soft: #9DB2B7; --teal: #2AC3BD; --teal-bright: #46D6CF; --line: rgba(255,255,255,0.13); }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); -webkit-font-smoothing: antialiased; line-height: 1.55; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+    section { padding: 52px 0; }
+    a { color: var(--teal); }
+    .topbar { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(1.4) blur(12px); background: color-mix(in srgb, var(--paper) 82%, transparent); border-bottom: 1px solid var(--line); }
+    .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; max-width: 1080px; }
+    .word { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; text-decoration: none; }
+    .word .ever { color: var(--ink); } .word .heard { color: var(--teal); } .word .dot { color: var(--ink-soft); font-weight: 700; }
+    h1 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; letter-spacing: -0.025em; margin: 0 0 10px; }
+    h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; margin: 34px 0 6px; }
+    p { color: var(--ink-soft); margin: 6px 0; }
+    .eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin: 0 0 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin-top: 14px; }
+    .card p { margin: 0; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: #fff; font-weight: 700; font-size: 15px; padding: 13px 22px; border-radius: 999px; text-decoration: none; margin-top: 8px; }
+    .btn:hover { background: var(--teal-bright); }
+    [hidden] { display: none !important; }
+    .support { background: var(--paper-2); border-top: 1px solid var(--line); }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(216px, 1fr)); gap: 16px; margin-top: 24px; }
+    .tier { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; }
+    .tier .emoji { font-size: 30px; line-height: 1; }
+    .tier h3 { margin: 12px 0 0; font-size: 17px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+    .tier .price { margin: 2px 0 14px; font-size: 26px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+    .tier .price span { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+    .tier .pp { margin-top: auto; }
+    .onetime { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; }
+    .onetime p { margin: 0; color: var(--ink); }
+    .thanks { text-align: center; margin-top: 24px; }
+    footer { border-top: 1px solid var(--line); padding: 30px 0; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13.5px; color: var(--ink-soft); max-width: 1080px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <a class="btn" style="margin-top:0" href="mailto:support@everheard.app?subject=EverHeard%20support">Contact us</a>
+    </div>
+  </div>
+
+  <header class="wrap" style="padding-top:52px">
+    <p class="eyebrow"><a href="/support.html">Help &amp; support</a></p>
+    <h1>Support EverHeard</h1>
+    <p>Optional and voluntary. Looking for help with the app instead? <a href="/support.html">Go to Help &amp; support →</a></p>
+  </header>
+
+  <section class="support">
+    <div class="wrap">
+      <h2 style="font-size:clamp(24px,4vw,34px); font-weight:800; letter-spacing:-0.02em; margin:0 0 8px;">Support EverHeard and the team building it.</h2>
+      <p>EverHeard is free, with no ads and no account, and it processes your audio on your device. Supporting it is absolutely voluntary and never required: the app works exactly the same either way. If EverHeard helps you and you'd like to support it, we truly appreciate it. Every bit helps.</p>
+      <div class="card" style="margin-top:14px"><p style="margin:0"><b>Please note:</b> payments go to <b>BTC Media Labs LLC</b>, the company that builds EverHeard. They are <b>not a donation</b> to a charity and are <b>not tax-deductible</b>. Monthly payments renew each month until you cancel, and you can cancel any time in your PayPal account under automatic payments. PayPal handles the payment under its own privacy policy and shares your payment details with us (such as your name, email and the amount) so we can keep a record; see our <a href="/privacy.html">Privacy Policy</a>.</p></div>
+
+      <div class="tiers" id="eh-support-grid">
+        <div class="tier">
+          <div class="emoji">☕</div>
+          <h3>Buy us a coffee</h3>
+          <div class="price">$5<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-3G504865TY575521ANKPQ75Y"></div>
+        </div>
+        <div class="tier">
+          <div class="emoji">🍽️</div>
+          <h3>Buy us a meal</h3>
+          <div class="price">$20<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-6PT48832S4239934VNKPQJBQ"></div>
+        </div>
+        <div class="tier">
+          <div class="emoji">🌍</div>
+          <h3>Support our team</h3>
+          <p style="margin:2px 0 0;font-size:14px;color:var(--ink-soft)">Help us make the world better with EverHeard.</p>
+          <div class="price">$50<span> / mo</span></div>
+          <div class="pp" id="paypal-container-P-7J9935925L159761WNKPQK2Y"></div>
+        </div>
+      </div>
+
+      <div class="onetime" id="eh-onetime">
+        <p><b>Prefer a one-time payment?</b> It helps just as much.</p>
+        <a class="btn" style="margin-top:0" href="https://www.paypal.com/ncp/payment/725WNT4WVFKC2" target="_blank" rel="noopener">Pay once →</a>
+      </div>
+
+      <div class="thanks card" id="eh-thanks" hidden>
+        <div style="font-size:42px; line-height:1">💛</div>
+        <h2 style="margin:10px 0 4px; font-weight:800;">Thank you — truly.</h2>
+        <p style="margin:0">We truly appreciate your support. It helps us keep building EverHeard.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <a class="word" href="/"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></a>
+      <div>© 2026 EverHeard · <a href="/privacy.html">Privacy</a> · <a href="/accessibility">Accessibility</a> · <a href="/test">Test EverHeard</a> · <a href="mailto:support@everheard.app">Contact</a> · A <a href="https://btcmedialabs.com">BTC Media Labs</a> product</div>
+    </div>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=BAADG91G0AUT3GqoWvn3_X3lzF9uTpjkABgzZcctsOQHUUjLDf62d8V_sN0K17E8RB3hZQc4nRXPn1PtqI&vault=true&intent=subscription"></script>
+  <script>
+    (function () {
+      function ehThanks() {
+        var g = document.getElementById('eh-support-grid');
+        var o = document.getElementById('eh-onetime');
+        var t = document.getElementById('eh-thanks');
+        if (g) g.hidden = true;
+        if (o) o.hidden = true;
+        if (t) { t.hidden = false; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      }
+      var plans = [
+        'P-3G504865TY575521ANKPQ75Y',
+        'P-6PT48832S4239934VNKPQJBQ',
+        'P-7J9935925L159761WNKPQK2Y'
+      ];
+      if (window.paypal && paypal.Buttons) {
+        plans.forEach(function (planId) {
+          paypal.Buttons({
+            style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+            createSubscription: function (data, actions) {
+              return actions.subscription.create({ plan_id: planId });
+            },
+            onApprove: function () { ehThanks(); }
+          }).render('#paypal-container-' + planId);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
