@@ -72,6 +72,9 @@
     .hero { padding: 84px 0 72px; }
     .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
     .hero-cta { display: flex; gap: 14px; margin-top: 34px; flex-wrap: wrap; }
+    .store-badges{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:12px 0}
+    .store-badges a{display:block;line-height:0}
+    .store-badges img.store-badge{height:40px;width:auto;max-width:none;display:block}
     .hero .lead { margin-top: 22px; }
     .device { background: var(--panel); border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow); padding: 20px; position: relative; overflow: hidden; }
     .device::before { content: ""; position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% -10%, color-mix(in srgb, var(--teal) 12%, transparent), transparent 60%); pointer-events: none; }
@@ -147,7 +150,9 @@
           <a class="btn ghost" href="/mac.html">EverHeard for Mac</a>
           <a class="btn ghost" href="#how">See how it works</a>
         </div>
-        <p class="small" style="margin-top:12px;opacity:.8">Available on the App Store, free: <a href="https://apps.apple.com/app/id6794107329" style="color:var(--teal)">iPhone and iPad</a> · <a href="https://apps.apple.com/app/id6797975409" style="color:var(--teal)">Mac</a><br>We're working on bringing EverHeard to Android. It's coming soon.</p>
+        <p class="small" style="margin-top:12px;margin-bottom:0;opacity:.8">Available on the App Store, free:</p>
+        <div class="store-badges"><a href="https://apps.apple.com/app/id6794107329"><img class="store-badge" src="/assets/badges/download-on-the-app-store-black-en-us.svg" width="120" height="40" alt="Download on the App Store"></a><a href="https://apps.apple.com/app/id6797975409"><img class="store-badge" src="/assets/badges/download-on-the-mac-app-store-black-en-us.svg" width="156" height="40" alt="Download on the Mac App Store"></a></div>
+        <p class="small" style="margin-top:0;opacity:.8">We're working on bringing EverHeard to Android. It's coming soon.</p>
       </div>
       <div class="device" role="img" aria-label="EverHeard app showing a doorbell alert, live bilingual captions, and haptic feedback">
         <div class="alertband"><span class="ic">🔔</span><span class="txt">Doorbell</span><span class="pulse"></span></div>
@@ -261,6 +266,7 @@
     <div class="wrap">
       <div class="word"><span class="ever">Ever</span><span class="heard">Heard</span><sup style="font-size:0.5em;vertical-align:super;opacity:0.65">™</sup><span class="dot">.app</span></div>
       <div>© 2026 EverHeard · iPhone · iPad · Mac · in active development · <a href="/privacy.html" style="color:var(--teal);text-decoration:none">Privacy</a> · <a href="/accessibility" style="color:var(--teal);text-decoration:none">Accessibility</a> · <a href="/support.html" style="color:var(--teal);text-decoration:none">Support</a> · <a href="mailto:support@everheard.app" style="color:var(--teal);text-decoration:none">Contact</a> · A <a href="https://btcmedialabs.com" style="color:var(--teal);text-decoration:none">BTC Media Labs</a> product</div>
+      <div style="flex-basis:100%">Apple, the Apple logo, App Store, iPhone, iPad, Mac and Apple Watch are trademarks of Apple Inc., registered in the U.S. and other countries and regions. Mac App Store is a trademark of Apple Inc.</div>
     </div>
   </footer>
 </body>
